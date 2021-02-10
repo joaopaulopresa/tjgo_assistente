@@ -1,0 +1,14 @@
+version: "2.0"
+stories:
+  - story: stop form + continue
+    steps:
+      - intent: procurar_processo
+      - action: numero_processo_form
+      - active_loop: numero_processo_form
+      - action: numero_processo_form
+      - active_loop: null
+      - action: utter_ask_continue_numero_processo
+      - or:
+        - intent: afirmar
+        - intent: negar
+      - action: action_ask_continue_numero_processo

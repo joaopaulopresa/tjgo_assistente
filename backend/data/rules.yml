@@ -1,0 +1,39 @@
+version: "2.0"
+rules:
+  - rule: Saudar usuario
+    steps:
+      - intent: saudar
+      - action: utter_saudar
+
+  - rule: Agradecer 
+    steps:
+      - intent: obrigado
+      - action: utter_obrigado
+
+  - rule: Bot challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: Bate-papo
+    steps:
+      - intent: bate-papo
+      - action: utter_bate-papo
+
+  - rule: ativar processo form
+    steps:
+      - intent: procurar_processo
+      - action: numero_processo_form
+      - active_loop: numero_processo_form
+
+  - rule: submit form
+    condition:
+    - active_loop: numero_processo_form
+    steps:
+      - action: numero_processo_form
+      - active_loop: null
+      - action: utter_ask_continue_numero_processo
+      - or:
+        - intent: afirmar
+        - intent: negar
+      - action: action_ask_continue_numero_processo

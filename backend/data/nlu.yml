@@ -1,0 +1,190 @@
+versão: "2.0"
+
+nlu:
+- intent: saudar
+  examples: |
+    - Oi
+    - Ei
+    - Oi bot
+    - Ei bot
+    - Olá
+    - Bom Dia
+    - Oi de novo
+    - Oi pessoal
+    - Oi senhor
+    - oi amigo!
+    - Olá
+    - saudações
+    - Olá pessoal
+    - olá está alguém aí
+    - olá robô
+    - olá
+    - heeey
+    - oi oi
+    - Ei
+    - ei ei
+    - Olá
+    - Oi
+    - Olá
+    - yo
+    - olá
+    - Oi?
+    - hey bot!
+    - Olá amiga
+
+- intent: procurar_processo
+  examples: |
+    - eu quero encontrar um processo com numero [5219179-76](numero_processo)
+    - consulte o processo [5071030-26](numero_processo) encontrar um processo
+    - pode me dar informações sobre um processo?
+    - me mostre meu processo [5240748-29](numero_processo)?
+    - pode me dar informações sobre o processo [5327956-61](numero_processo)?
+    - quero consultar um processo
+    - quero consultar o processo [5386534-6](numero_processo)
+    - consultar processo
+    - consultar processo [5366452-56](numero_processo)
+    - ache o processo [5366452-56](numero_processo)
+    - me mostre o processo [5366452-56](numero_processo)
+    - encontre [5366452-56](numero_processo)
+  
+- intent: afirmar
+  examples: |
+    - correto
+    - vós
+    - uh sim
+    - vamos fazer isso
+    - sim
+    - uh sim
+    - hum sim
+    - sim batendo
+    - está correto
+    - sim Sim
+    - certo
+    - sim
+    - sim
+    - sim certo
+    - sim e eu não me importo
+    - pode apostar
+    - eu amo isso
+
+- intent: negar
+  examples: |
+    - não
+    - nenhuma nova seleção
+    - não, obrigado
+    - não obrigado
+    - Oh não
+    - respiração não
+    - você tem algo mais
+    - não, isso não funciona para mim
+
+- intent: informar
+  examples: |
+    - o numero do processo é [5366452-56](numero_processo)
+    - ache o processo [5366452-56](numero_processo)
+    - me mostre o processo [5366452-56](numero_processo)
+    - encontre [5366452-56](numero_processo)
+    - o processo [5386534-6](numero_processo)
+    - [5606344-45](numero_processo)
+    - [5084550-84](numero_processo)
+    - [5508865-21](numero_processo)
+    - [5698312-96](numero_processo)
+
+- intent: obrigado
+  examples: |
+    - hum obrigado adeus
+    - ok legal uh adeus obrigado
+    - ok, obrigado adeus
+    - você é demais
+    - e isso é tudo obrigado e tchau
+    - obrigado e tchau
+    - desculpe pelos meus erros, obrigado adeus
+    - barulho obrigado adeus
+    - obrigado barulho de adeus
+    - ok, obrigado adeus
+    - uh obrigado adeus
+    - obrigado adeus
+    - obrigado barulho de adeus obrigado adeus
+    - respiração obrigado adeus
+    - obrigado
+    - ok obrigado
+    - obrigado adeus
+    - ah obrigado adeus
+    - obrigado barulho
+    - obrigado adeus
+    - muito obrigado adeus
+    - obrigado
+    - barulho, obrigado adeus
+    - ininteligível, obrigado adeus
+    - uh ok obrigado adeus
+    - obrigado tchau
+    - bem, obrigado, tchau
+
+- intent: bate-papo
+  examples: |
+    - você pode compartilhar seu chefe comigo?
+    - quero conhecer seu dono
+    - quero saber a empresa que projetou você
+    - quero saber a empresa que gerou você
+    - quero saber a empresa que te inventou
+    - quero saber quem te inventou
+    - Posso perguntar quem te inventou?
+    - diga-me a empresa que o criou
+    - por favor me diga quem te criou
+    - conte-me mais sobre seus criadores
+    - conte-me mais sobre seus fundadores
+    - Ahoy amigo como você está?
+    - você está bem
+    - você está tendo um bom dia
+    - Você está bem?
+    - você está bem
+    - Você se sente bem?
+    - como vão as coisas
+    - Como estão as coisas com você?
+    - Como estão as coisas?
+    - Como você está
+    - como vai você
+    - como você está esta manhã
+    - como você está se sentindo
+    - como você está hoje
+    - Como você está?
+    - Como está o tempo hoje?
+    - Como está o tempo?
+    - Como está o tempo?
+    - Como está o tempo na sua casa?
+    - Você tem bom tempo?
+    - Está chovendo?
+    - Como é lá fora?
+    - Está quente ou frio?
+    - Lindo dia, não é?
+    - Qual é a previsão do tempo?
+    - Está bastante arejado lá fora?
+
+- intent: parar
+  examples: |
+    - ok então você não pode me ajudar
+    - isso foi uma merda, você não está ajudando
+    - voce nao pode me ajudar
+    - você não pode me ajudar com o que eu preciso
+    - eu acho que você não pode me ajudar então
+    - ok eu acho que você não pode me ajudar
+    - não é isso que eu quero
+    - ok, mas isso não me ajuda
+    - isso não leva a nada
+    - esta conversa não é muito útil
+    - você não pode me ajudar com o que eu quero
+    - Eu acho que você não pode me ajudar
+    - hm eu não acho que você pode fazer o que eu quero
+    - Pare
+    - pare volte
+    - você conseguiu alguma coisa?
+    - e você se chama empresa de bots? pff
+    - e é isso?
+    - nada mais?
+
+- intent: bot_challenge
+  examples: |
+    - Você é um robô?
+    - Você é um humano?
+    - estou falando com um bot?
+    - estou falando com um humano?

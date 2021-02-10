@@ -1,0 +1,68 @@
+version: "2.0"
+intents:
+  - procurar_processo:
+      use_entities: []
+  - bate-papo:
+      use_entities: []
+  - informar
+  - afirmar
+  - negar
+  - parar
+  - obrigado
+  - saudar
+  - bot_challenge
+
+entities:
+  - numero_processo
+
+slots:
+  numero_processo:
+    type: text
+    influence_conversation: false
+    auto_fill: false
+
+responses:
+  utter_ask_numero_processo:
+    - text: "Qual o número do processo?"
+  utter_ask_feedback:
+    - text: "Por favor me de um feedback sobre sua experiência"
+  utter_submit:
+  - text: "Ok!"
+  utter_ask_continue_numero_processo:
+    - text: "Deseja consultar outras informações sobre o processo número: {numero_processo}?"
+  utter_obrigado:
+    - text: "Por nada! :)"
+  utter_bate-papo:
+    - text: "Eu sou assistente de busca de processo! Como posso ajudar?"
+  utter_ask_continue:
+    - text: "Quer continuar?"
+  utter_processo_nao_encontrado:
+    - text: "O processo não foi encontrado, por favor, tente novamente"
+  utter_wrong_numero_processo:
+    - text: "O número de processo informado é inválido, tente novamente!"  
+  utter_default:
+    - text: "Desculpe, não pude entendê-lo, por favor tente falar de outra maneira"
+  utter_saudar:
+    - text: "Olá eu sou um assistente de consulta processual, como posso ajudá-lo?"
+  utter_iamabot:
+    - text: "Eu sou um bot, feito pelo TJGO."
+  utter_restart:
+    - text: "reiniciado"
+
+actions:
+- validate_numero_processo_form
+- action_ask_continue_numero_processo
+
+forms:
+  numero_processo_form:
+    numero_processo:
+    - type: from_entity
+      entity: numero_processo
+      not_intent: [bate-papo,bot_challenge]
+  
+
+
+
+session_config:
+  session_expiration_time: 60  # value in minutes
+  carry_over_slots_to_new_session: true
